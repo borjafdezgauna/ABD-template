@@ -1,4 +1,4 @@
-﻿using DbManager.Parser;
+using DbManager.Parser;
 using System.Collections.Generic;
 
 namespace DbManager
@@ -11,14 +11,17 @@ namespace DbManager
 
         public Update(string table, List<SetValue> columnNames, Condition where)
         {
-            Table = table;
-            Columns = columnNames;
-            Where = where;
+            //TODO DEADLINE 2: Initialize member variables
+            
         }
 
         public string Execute(Database database)
         {
+            //TODO DEADLINE 3: Run the query and return the appropriate message
+            //UpdateSuccess or the last error in the database
+            
             return null;
+            
         }
 
        

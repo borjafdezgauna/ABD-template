@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using DbManager.Parser;
@@ -12,11 +12,16 @@ namespace DbManager
 
         public DropSecurityProfile(string profileName)
         {
-            ProfileName = profileName;
+            //TODO DEADLINE 4: Initialize member variables
+            
         }
         public string Execute(Database database)
         {
+            //TODO DEADLINE 5: Run the query and return the appropriate message
+            //UsersProfileIsNotGrantedRequiredPrivilege, SecurityProfileDoesNotExistError, DropSecurityProfileSuccess
+            
             return null;
+            
         }
 
     }

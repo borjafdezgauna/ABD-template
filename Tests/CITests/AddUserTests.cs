@@ -7,7 +7,7 @@ using Xunit;
 using DbManager.Security;
 using DbManager;
 
-namespace ParsingTests
+namespace SecurityParsingTests
 {
     public class AddUserTests
     {
@@ -34,7 +34,10 @@ namespace ParsingTests
         [Fact]
         public void IncorrectCapitalization()
         {
-            AddUser query = MiniSQLParser.Parse("Add User (user,password,profile)") as AddUser;
+            AddUser query = MiniSQLParser.Parse("ADD USER (user,password,profile)") as AddUser;
+            Assert.NotNull(query);
+            
+            query = MiniSQLParser.Parse("Add User (user,password,profile)") as AddUser;
             Assert.Null(query);
 
             query = MiniSQLParser.Parse("add user (user,password,profile)") as AddUser;
@@ -44,20 +47,26 @@ namespace ParsingTests
         [Fact]
         public void IncorrectUserWithForbiddenChars()
         {
-            AddUser query = MiniSQLParser.Parse("ADD USER (user_1,password,profile)") as AddUser;
+            AddUser query = MiniSQLParser.Parse("ADD USER (user,password,profile)") as AddUser;
+            Assert.NotNull(query);
+
+            query = MiniSQLParser.Parse("ADD USER (user_1,password,profile)") as AddUser;
             Assert.Null(query);
 
-            query = MiniSQLParser.Parse("DELETE USER (user 1,password,profile)") as AddUser;
+            query = MiniSQLParser.Parse("ADD USER (user 1,password,profile)") as AddUser;
             Assert.Null(query);
         }
 
         [Fact]
         public void IncorrectWithoutProfile()
         {
-            AddUser query = MiniSQLParser.Parse("DELETE USER ()") as AddUser;
+            AddUser query = MiniSQLParser.Parse("ADD USER (user,password,profile)") as AddUser;
+            Assert.NotNull(query);
+
+            query = MiniSQLParser.Parse("ADD USER ()") as AddUser;
             Assert.Null(query);
 
-            query = MiniSQLParser.Parse("DELETE USER (,,)") as AddUser;
+            query = MiniSQLParser.Parse("ADD USER (,,)") as AddUser;
             Assert.Null(query);
         }
     }

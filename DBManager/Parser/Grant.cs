@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using DbManager.Parser;
@@ -14,13 +14,16 @@ namespace DbManager
 
         public Grant(string privilegeName, string tableName, string profileName)
         {
-            PrivilegeName = privilegeName;
-            TableName = tableName;
-            ProfileName = profileName;
+            //TODO DEADLINE 4: Initialize member variables
+            
         }
         public string Execute(Database database)
         {
+            //TODO DEADLINE 5: Run the query and return the appropriate message
+            //UsersProfileIsNotGrantedRequiredPrivilege, SecurityProfileDoesNotExistError, PrivilegeDoesNotExistError, GrantPrivilegeSuccess, ProfileAlreadyHasPrivilege
+            
             return null;
+            
         }
 
     }

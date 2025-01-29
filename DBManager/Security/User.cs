@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -12,10 +12,8 @@ namespace DbManager.Security
 
         public User(string username, string password)
         {
-            Username = username;
-
-            //Encrypt the password
-            EncryptedPassword = Encryption.Encrypt(password);
+            //TODO DEADLINE 5: Initialize the member variables. We must encrypt the password
+            
         }
 
         public User() { }

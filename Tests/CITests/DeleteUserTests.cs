@@ -7,7 +7,7 @@ using Xunit;
 using DbManager.Security;
 using DbManager;
 
-namespace SampleTests
+namespace SecurityParsingTests
 {
     public class DeleteUserTests
     {

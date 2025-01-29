@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -11,13 +11,17 @@ namespace DbManager.Parser
 
         public Delete(string table, Condition where)
         {
-            Table = table;
-            Where = where;
+            //TODO DEADLINE 2: Initialize member variables
+            
         }
 
         public string Execute(Database database)
         {
+            //TODO DEADLINE 3: Run the query and return the appropriate message
+            //DeleteSuccess or the last error in the database
+            
             return null;
+            
         }
     }
 }

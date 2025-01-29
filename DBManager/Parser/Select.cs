@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,18 +10,20 @@ namespace DbManager
     {
         public string Table { get; private set; }
         public List<string> Columns { get; private set; }
-        public Parser.Condition Where { get; private set; }
+        public Condition Where { get; private set; }
 
-        public Select(string table, List<string> columns, Parser.Condition where=null)
+        public Select(string table, List<string> columns, Condition condition=null)
         {
-            Table = table;
-            Columns = columns;
-            Where = where;
+            //TODO DEADLINE 2: Initialize member variables
+            
         }
 
         public string Execute(Database database)
         {
-            return null;            
+            //TODO DEADLINE 3: Run the query and return the table as a string (or the last error in the database)
+            
+            return null;
+            
         }
     }
 }
