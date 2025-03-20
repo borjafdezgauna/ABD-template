@@ -76,10 +76,10 @@ namespace DbManager
         {
             //TODO DEADLINE 1.A: Return the table as a string. The format is specified in the documentation
             //Valid examples:
-            //['Name']{'Adolfo'}{'Jacinto'}
-            //['Name','Age']{'Adolfo','23'}{'Jacinto','24'}
-            //[]
-            //['Name']
+            //['Name']{'Adolfo'}{'Jacinto'} <- one column, two rows
+            //['Name','Age']{'Adolfo','23'}{'Jacinto','24'} <- two columns, two rows
+            // <- no columns, no rows
+            //['Name'] <- one column, no rows
             
             return null;
             

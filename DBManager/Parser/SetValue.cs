@@ -13,7 +13,7 @@ namespace DbManager.Parser
 
         public SetValue(string column, string value)
         {
-            //TODO DEADLINE 2: Initialize member variables
+            //TODO DEADLINE 1A: Initialize member variables
             
         }
     }
