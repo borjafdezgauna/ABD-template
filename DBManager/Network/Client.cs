@@ -45,6 +45,15 @@ namespace DbManager.Network
             
         }
 
+        public bool Create(string database, string username, string password, out string error)
+        {
+            //DEADLINE 6: Send a Create command to the server using SendString
+            
+            error = null;
+            return false;
+            
+        }
+
         public string SendQuery(string query)
         {
             //DEADLINE 6: Send a Query command to the server using SendString
