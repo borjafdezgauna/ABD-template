@@ -58,7 +58,7 @@ namespace DbManager
 
         public bool DropTable(string tableName)
         {
-            //DEADLINE 1.B: Delete the table with the given name. If there is none, return false and set LastErrorMessage
+            //DEADLINE 1.B: Delete the table with the given name. If the table doesn't exist, return false and set LastErrorMessage
             //If everything goes ok, return true and set LastErrorMessage with the appropriate success message (Check Constants.cs)
             
             return false;
@@ -66,7 +66,7 @@ namespace DbManager
 
         public bool Insert(string tableName, List<string> values)
         {
-            //DEADLINE 1.B: Insert a new row to the table. If it doesn't exist return false and set LastErrorMessage appropriately (Check Constants.cs)
+            //DEADLINE 1.B: Insert a new row to the table. If it doesn't exist return false and set LastErrorMessage appropriately
             //If everything goes ok, set LastErrorMessage with the appropriate success message (Check Constants.cs)
             
             return false;
@@ -106,11 +106,12 @@ namespace DbManager
         
         
 
-        private const string TableFileExtension = ".tbl";
+        
         public bool Save(string databaseName)
         {
             //DEADLINE 1.C: Save this database to disk with the given name
             //If everything goes ok, return true, false otherwise.
+            //DEADLINE 5: Save the SecurityManager so that it can be loaded with the database in Load()
             
             return false;
             
@@ -120,6 +121,8 @@ namespace DbManager
         {
             //DEADLINE 1.C: Load the (previously saved) database of name databaseName
             //If everything goes ok, return the loaded database (a new instance), null otherwise.
+            //DEADLINE 5: When the Database object is created, set the username (create a new method if you must)
+            //After loading the database, load the SecurityManager and check the password is correct. If it's not, return null. If it is return the database
             
             return null;
         }
@@ -147,7 +150,7 @@ namespace DbManager
 
 
 
-        //From here on, ONLY FOR TESTING
+        //All these methods are ONLY FOR TESTING. Use them to simplify creating unit tests:
         public const string AdminUsername = "admin";
         public const string AdminPassword = "adminPassword";
         public static Database CreateTestDatabase()

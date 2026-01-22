@@ -6,7 +6,6 @@ namespace DbManager
 {
     public class Table
     {
-        //TODO
         private List<ColumnDefinition> ColumnDefinitions = new List<ColumnDefinition>();
         private List<Row> Rows = new List<Row>();
         
