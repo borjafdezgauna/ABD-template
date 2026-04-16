@@ -8,6 +8,7 @@ namespace DbManager
 {
     public class Constants
     {
+        //General errors
         public const string Error = "ERROR: ";
         public const string CreateTableSuccess = "Table created";
         public const string InsertSuccess = "Tuple added";
@@ -21,6 +22,7 @@ namespace DbManager
         public const string ColumnDoesNotExistError = Error + "Column does not exist";
         public const string ColumnCountsDontMatch = Error + "The number of values given and the number of columns in the table don't match";
 
+        //Security errors
         public const string CreateSecurityProfileSuccess = "Security profile created";
         public const string DropSecurityProfileSuccess = "Security profile dropped";
         public const string GrantPrivilegeSuccess = "Security privilege granted";
@@ -33,6 +35,9 @@ namespace DbManager
         public const string ProfileAlreadyHasPrivilege = Error + "Profile already has privilege";
         public const string UsersProfileIsNotGrantedRequiredPrivilege = Error + "The security profile of the user does not have the required privilege to perform the operation";
 
-        
+        //Server-client errors
+        public const string IncorrectLogin = Error + "Incorrect login or non-existing database";
+        public const string CouldNotCreateDatabase = Error + "Could not create database";
+        public const string NoDatabaseOpen = Error + "This operation cannot be done because there is no open database";
     }
 }
