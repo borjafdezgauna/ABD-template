@@ -5,26 +5,34 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Build",
+            "name": "Client",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
-            "program": "${workspaceFolder}/ABD.sln",
+            "program": "${workspaceFolder}/Samples/ClientConsole/bin/Debug/net9/ClientConsole.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
-            "console": "internalConsole",
+            "console": "externalTerminal",
+            "preLaunchTask": "buildClient"
         },
+
         {
-            "name": "Run tests",
+            "name": "Server",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "test",
-            "program": "${workspaceFolder}/ABD.sln",
+            "program": "${workspaceFolder}/Samples/ServerConsole/bin/Debug/net9/ServerConsole.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
-            "console": "internalConsole",
+            "console": "externalTerminal",
+            "preLaunchTask": "buildServer", 
+            
+        },
+    ],
+    "compounds": [
+        {
+            "name": "Server/Client",
+            "configurations": ["Server", "Client"]
         }
     ]
 }
