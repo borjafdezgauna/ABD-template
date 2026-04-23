@@ -17,11 +17,11 @@ namespace ServerConsole
             {
                 DbManager.Database serverDatabase = new Database("admin", "adminPassword");
                 //Listen on port 1200. Accept connections from any IP address
-                TcpListener server = new TcpListener(IPAddress.Parse("0.0.0.0"), 1200);
+                TcpListener server = new TcpListener(IPAddress.Parse("0.0.0.0"), 1500);
 
                 server.Start();
 
-                Console.WriteLine("Server running and listening on port 1200");
+                Console.WriteLine("Server running and listening on port 1500");
 
                 Socket socket = server.AcceptSocket();
 

@@ -19,7 +19,7 @@ namespace ClientConsole
                 Task.Delay(2000).Wait();
 
                 Console.Write("Connecting");
-                client.Connect("127.0.0.1", 1200);
+                client.Connect("127.0.0.1", 1500);
                 Console.WriteLine("Connected");
 
                 string msg = null;
